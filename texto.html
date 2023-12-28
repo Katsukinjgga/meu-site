@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por que você é especial para mim</title>
+    <style>
+        body {
+            background-color: #3b0013; /* Vinho mais escuro */
+            color: #ffc0cb; /* Rosa claro */
+            font-family: 'Simonetta', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+/* Adicione este trecho ao seu estilo existente */
+.carousel {
+    display: flex;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 10px; /* Adiciona espaçamento entre as imagens */
+    border: 5px solid #3b0013; /* Cor da borda, combinando com o fundo vinho escuro */
+}
+
+.carousel img:first-child {
+    margin-left: 0; /* Remove a margem àp esquerda para a primeira imagem */pp
+}
+
+.carousel img:last-child {
+    margin-right: 0; /* Remove a margem à direita para a última imagem */
+}
+
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
+            padding: 20px;
+            max-width: 600px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .error-message {
+            background-color: #e74c3c; /* Vermelho mais claro */
+            color: #fff;
+            padding: 20px;
+            display: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffc0cb; /* Rosa claro */
+            font-size: 16px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ffc0cb; /* Rosa claro */
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: calc(100% - 20px);
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ffc0cb; /* Rosa claro */
+            color: #3b0013; /* Vinho mais escuro */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d98880; /* Rosa mais escuro */
+        }
+    </style>
+</head>
+<body>
+
+
+    <img id="hearts" src="heart-image-url" alt="Hearts Image"> <!-- Substitua 'heart-image-url' pela URL da imagem de corações -->
+<div class="carousel-container">
+            <div class="carousel">
+                <div><img src="https://i.postimg.cc/bNZwrh2S/97be82a8-f57c-44f8-b372-fe383f8abd89.jpg" alt="Imagem 1"></div>
+                <div><img src="https://i.postimg.cc/bNZwrh2S/97be82a8-f57c-44f8-b372-fe383f8abd89.jpg" alt="Imagem 2"></div>
+                <div><img src="https://i.postimg.cc/bNZwrh2S/97be82a8-f57c-44f8-b372-fe383f8abd89.jpg" alt="Imagem 3"></div>
+                <!-- Adicione mais divs conforme necessário para mais imagens -->
+            </div>
+    <div class="container">
+        <div class="content">
+            <p> ♥︎ Você sempre me faz feliz<p>
+<p> ♥︎ Sempre se esforçava pra me fazer sorrir <p>
+<p> ♥︎ Sempre me dava cartinhas (amo) <p>
+<p> ♥︎ Tentava toda vez me deixar feliz <p>
+<p> ♥︎ Vivia me dando uns beijinho do nada KKKKKKKKKK <p>
+<p> ♥︎ Jogava comigo (raramente) <p>
+<p> ♥︎ Me obrigou a ter cabelo e agora lembro de você todo dia <p>
+<p> ♥︎ Me faz rir pra caralhoKKKKKK <p>
+<p> ♥︎ É perfeita <p>
+ <p> ♥︎ É fofa cmg <p>
+        
+        </div>
+        <div class="password-box">
+            <label for="password">Uma data importante</label>
+            <input type="date" id="password" placeholder="Digite a senha">
+            <button onclick="checkPassword()">Enviar</button>
+        </div>
+        <footer>
+            Te amo
+        </footer>
+        <div id="error-message" class="error-message">Senha incorreta. Tente novamente.</div>
+    </div>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "2023-04-24") {
+                document.getElementById("hearts").style.display = "none";
+                document.querySelector('.password-box').style.display = 'none';
+                document.getElementById('error-message').style.display = 'none';
+                document.querySelector('.content').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
